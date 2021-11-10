@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PokéDex</title>
+</head>
+<body>
+    <header>
+        <img class="header-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokémon Logo">
+    </header>
+    <main>
+        <div class="search">
+            <form action="javascript:;" onsubmit="submitForm(this)">
+                <input type="text" id="pokemon" name="pokemon" placeholder="Find Pokémon from name or ID">
+                <input type="submit" value="Submit">
+                <input type="button" value="Clear All">
+            </form>
+        </div>
+
+        <div class="cards-container">
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

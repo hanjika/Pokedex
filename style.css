@@ -1,0 +1,216 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header, main {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin: 20px;
+}
+
+.search {
+    display: flex;
+}
+
+input[type="text"] {
+    height: 3vh;
+    width: 20vw;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="submit"], input[type="button"] {
+    height: 3vh;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+}
+
+input[type="submit"] {
+    background-color: #2b73b9;
+    color: #ffcb05;
+}
+
+input[type="submit"]:hover {
+    color: white;
+}
+
+input[type="button"] {
+    background-color: red;
+    color: white;
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: green;
+}
+
+main {
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-logo {
+    height: 10vh;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.poke-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    width: 12vw;
+    height: 50vh;
+    padding: 20px;
+    margin: 10px;
+}
+
+.poke-card img {
+    width: 7vw;
+    margin: 5px;
+}
+
+h3 {
+    text-transform: capitalize;
+    margin: 0;
+}
+
+h4 {
+    margin-top: 5px;
+}
+
+h5 {
+    margin: 10px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+ul {
+    font-size: 13px;
+    padding-left: 0;
+}
+
+.normal {
+    background-color: #75515b;
+    color: white;
+    box-shadow: #ca98a7 0px 30px 60px -12px inset, #ca98a7 0px 18px 36px -18px inset;
+}
+
+.fire {
+    background-color: #ab1f23;
+    color: white;
+    box-shadow: #fc4c5a 0px 30px 60px -12px inset, #fc4c5a 0px 18px 36px -18px inset;
+}
+
+.water {
+    background-color: #1552e2;
+    color: white;
+    box-shadow: #86a8fc 0px 30px 60px -12px inset, #86a8fc 0px 18px 36px -18px inset;
+}
+
+.grass {
+    background-color: #1a783f;
+    color: white;
+    box-shadow: #27cb4f 0px 30px 60px -12px inset, #27cb4f 0px 18px 36px -18px inset;
+}
+
+.electric {
+    background-color: #e3e32b;
+    color: black;
+    box-shadow: #fbfb70 0px 30px 60px -12px inset, #fbfb70 0px 18px 36px -18px inset;
+}
+
+.ice {
+    background-color: #86d2f5;
+    color: black;
+    box-shadow: #d7f1fa 0px 30px 60px -12px inset, #d7f1fa 0px 18px 36px -18px inset;
+}
+
+.fighting {
+    background-color: #964125;
+    color: white;
+    box-shadow: #ef6138 0px 30px 60px -12px inset, #ef6138 0px 18px 36px -18px inset;
+}
+
+.poison {
+    background-color: #5c2e88;
+    color: white;
+    box-shadow: #9b69d9 0px 30px 60px -12px inset, #9b69d9 0px 18px 36px -18px inset;
+}
+
+.ground {
+    background-color: #ab7026;
+    color: black;
+    box-shadow: #6e491f 0px 30px 60px -12px inset, #6e491f 0px 18px 36px -18px inset;
+}
+
+.flying {
+    background-color: #4a677d;
+    color: white;
+    box-shadow: #93b2c7 0px 30px 60px -12px inset, #93b2c7 0px 18px 36px -18px inset;
+}
+
+.psychic {
+    background-color: #a6296d;
+    color: white;
+    box-shadow: #f81d8f 0px 30px 60px -12px inset, #f81d8f 0px 18px 36px -18px inset;
+}
+
+.bug {
+    background-color: #1c4b27;
+    color: white;
+    box-shadow: #3b9950 0px 30px 60px -12px inset, #3b9950 0px 18px 36px -18px inset;
+}
+
+.rock {
+    background-color: #48180b;
+    color: white;
+    box-shadow: #8c3d21 0px 30px 60px -12px inset, #8c3d21 0px 18px 36px -18px inset;
+}
+
+.ghost {
+    background-color: #33336b;
+    color: white;
+    box-shadow: #906790 0px 30px 60px -12px inset, #906790 0px 18px 36px -18px inset;
+}
+
+.dark {
+    background-color: #040706;
+    color: white;
+    box-shadow: #5a5979 0px 30px 60px -12px inset, #5a5979 0px 18px 36px -18px inset;
+}
+
+.dragon {
+    background-color: #448b95;
+    color: black;
+    box-shadow: #61cad9 0px 30px 60px -12px inset, #61cad9 0px 18px 36px -18px inset;
+}
+
+.steel {
+    background-color: #5f756d;
+    color: black;
+    box-shadow: #41be94 0px 30px 60px -12px inset, #41be94 0px 18px 36px -18px inset;
+}
+
+.fairy {
+    background-color: #971944;
+    color: white;
+    box-shadow: #ea1369 0px 30px 60px -12px inset, #ea1369 0px 18px 36px -18px inset;
+}
