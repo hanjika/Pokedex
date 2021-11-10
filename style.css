@@ -59,6 +59,7 @@ main {
 
 .header-logo {
     height: 10vh;
+    padding-top: 20px;
 }
 
 .cards-container {
@@ -83,6 +84,17 @@ main {
     margin: 5px;
 }
 
+.evolution {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.evolution img {
+    width: 4vw;
+}
+
 h3 {
     text-transform: capitalize;
     margin: 0;
@@ -100,6 +112,11 @@ button {
     background-color: transparent;
     border: none;
     font-size: 25px;
+    transition: 0.4s;
+}
+
+button:hover {
+    color: white;
 }
 
 ul {

@@ -6,7 +6,7 @@ let storedPokes = JSON.parse(localStorage.getItem('PokedexStorage'));
 window.onload = () => {
     if (storedPokes !== null) {
         for (const storedPoke of storedPokes) {
-        createCard(storedPoke); 
+            createCard(storedPoke);
         }
     } else {
         storedPokes = [];
@@ -58,6 +58,9 @@ function submitForm(form) {
                 createCard(pokeObj);
             })
         }
+    })
+    .catch(error => {
+        alert('Cannot find Pokémon');
     })
 }
 
@@ -119,21 +122,15 @@ function createCard(pokeObj) {
     if (pokeObj.id === 132) {
         const move = document.createElement('li');
         move.innerText = pokeObj.moves[0].move.name;
-        
+
         movesUl.appendChild(move);
     } else {
         for (let i = 0; i < 4; i++) {
             const move = document.createElement('li');
             move.innerText = pokeObj.moves[i].move.name;
-            
+
             movesUl.appendChild(move);
         }
-    }
-
-    const evolution = document.createElement('p');
-    const capEvol = pokeObj.evolution;
-    if (pokeObj.evolution !== undefined) {
-        evolution.innerText = 'Evolution: ' + capEvol;
     }
 
     movesDiv.appendChild(movesH);
@@ -143,11 +140,31 @@ function createCard(pokeObj) {
     div.appendChild(name);
     div.appendChild(id);
     div.appendChild(movesDiv);
-    div.appendChild(evolution);
     document.querySelector('.cards-container').appendChild(div);
+
+    if (pokeObj.evolution !== undefined) {
+        const evolDiv = document.createElement('div');
+        evolDiv.classList.add('evolution');
+
+        evolution(evolDiv, pokeObj);
+        div.appendChild(evolDiv);
+    }
 }
 
-function ucfirst(str) {
-    var firstLetter = str.slice(0,1);
-    return firstLetter.toUpperCase() + str.substring(1);
+function evolution(evolDiv, pokeObj) {
+    const evolution = document.createElement('p');
+    evolution.innerText = 'Evolution: ' + pokeObj.evolution
+
+    const img = document.createElement('img');
+
+    fetch('https://pokeapi.co/api/v2/pokemon/' + pokeObj.evolution)
+        .then(response => response.json())
+        .then(info => {
+            const evolImage = info.sprites.front_default;
+
+            img.setAttribute('src', evolImage);
+        })
+
+    evolDiv.appendChild(evolution);
+    evolDiv.appendChild(img);
 }
